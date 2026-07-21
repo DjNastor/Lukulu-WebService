@@ -1,0 +1,5 @@
+import React from "react";
+
+const values = [["Made for you", "We design around your business, not a template."], ["Fast websites", "Your customers get a smooth, quick experience."], ["Easy to find", "We help people find you online."], ["Here to help", "We support you after your site goes live."]];
+
+export function ValueStrip() {return <section className="bg-[#1a1817] px-6 py-20 text-white"><div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">{values.map(([title, description], index) => <div key={title} className="border-l border-[#c28d4b]/30 pl-5"><div className="mb-5 font-serif text-2xl text-[#d9ab6c]">0{index + 1}</div><h2 className="font-serif text-xl">{title}</h2><p className="mt-2 text-sm leading-6 text-stone-400">{description}</p></div>)}</div></section>;}

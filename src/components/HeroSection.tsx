@@ -1,0 +1,25 @@
+import React from "react";
+import { ArrowRightIcon, SparklesIcon } from "lucide-react";
+import { motion } from "framer-motion";
+
+export function HeroSection() {
+  return (
+    <section id="top" className="relative flex min-h-[720px] items-center overflow-hidden px-6 pb-24 pt-36 sm:pt-40">
+      <div className="pointer-events-none absolute right-[-10rem] top-24 h-[34rem] w-[34rem] rounded-full bg-[#f2dfbf]/45 blur-[100px]" />
+      <div className="pointer-events-none absolute bottom-[-10rem] left-[12%] h-72 w-72 rounded-full bg-stone-100 blur-[90px]" />
+      <div className="relative mx-auto grid w-full max-w-7xl items-center gap-14 lg:grid-cols-[1.03fr_.97fr] lg:gap-16">
+        <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}>
+          <div className="mb-6 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.17em] text-[#92400e]"><SparklesIcon size={14} strokeWidth={2.5} />Digital studio · Johannesburg</div>
+          <h1 className="max-w-3xl font-serif text-[3.2rem] font-semibold leading-[1.03] tracking-[-0.045em] text-[#1a1817] sm:text-6xl xl:text-7xl">Websites and tools that help <em className="font-normal text-[#92400e]">your business</em> grow.</h1>
+          <p className="mt-7 max-w-xl text-base leading-8 text-stone-600 sm:text-lg">We build simple, fast websites and digital tools that help more people find and trust your business.</p>
+          <div className="mt-9 flex flex-wrap gap-3"><a href="#contact" className="inline-flex items-center gap-2 rounded-xl bg-[#92400e] px-6 py-4 text-sm font-bold text-white shadow-[0_12px_25px_rgba(146,64,14,0.2)] transition-transform hover:-translate-y-0.5">Talk to us <ArrowRightIcon size={16} /></a><a href="#portfolio" className="rounded-xl border border-stone-200 bg-white px-6 py-4 text-sm font-bold text-[#1a1817] transition-colors hover:bg-stone-50">See our work</a></div>
+          <div className="mt-12 flex items-center gap-7 text-xs text-stone-500"><div><strong className="block font-serif text-2xl text-[#1a1817]">30+</strong> projects launched</div><div className="h-9 w-px bg-stone-200" /><div><strong className="block font-serif text-2xl text-[#1a1817]">24h</strong> reply time</div></div>
+        </motion.div>
+        <motion.div className="relative mx-auto w-full max-w-[590px]" initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.75, delay: 0.13, ease: [0.22, 1, 0.36, 1] }}>
+          <div className="relative z-10 overflow-hidden rounded-2xl border-[11px] border-[#292827] bg-white shadow-[0_28px_65px_rgba(26,24,23,0.28)]"><div className="flex h-8 items-center gap-1.5 border-b border-stone-200 bg-stone-50 px-3"><i className="h-2 w-2 rounded-full bg-[#d88878]" /><i className="h-2 w-2 rounded-full bg-[#e5ba62]" /><i className="h-2 w-2 rounded-full bg-[#7dab8f]" /></div><div className="grid min-h-[330px] grid-cols-[.26fr_.74fr] sm:min-h-[370px]"><aside className="border-r border-stone-100 bg-[#fcfbfa] p-4"><div className="mb-7 h-2 w-12 rounded bg-[#1a1817]" />{["w-9", "w-12", "w-8", "w-11"].map((width, index) => <div className={`mb-4 h-1.5 ${width} rounded bg-stone-200`} key={index} />)}</aside><div className="p-5 sm:p-8"><div className="flex items-center justify-between"><div><div className="h-2 w-20 rounded bg-[#c28d4b]" /><div className="mt-3 h-5 w-40 rounded bg-stone-900" /></div><div className="h-9 w-9 rounded-full bg-[#f5ead8]" /></div><div className="mt-8 grid grid-cols-3 gap-3">{["R 85k", "18", "62%"].map((item) => <div className="rounded-xl border border-stone-100 bg-[#fdfcfb] p-3 shadow-sm" key={item}><div className="h-1.5 w-8 rounded bg-stone-200" /><strong className="mt-2 block text-[10px] text-stone-800">{item}</strong></div>)}</div><div className="mt-5 rounded-xl bg-[#1a1817] p-4"><div className="flex items-end gap-2"><div className="h-8 flex-1 rounded-t bg-[#c28d4b]" /><div className="h-14 flex-1 rounded-t bg-[#d5ad79]" /><div className="h-10 flex-1 rounded-t bg-[#eee0cd]" /><div className="h-20 flex-1 rounded-t bg-[#c28d4b]" /><div className="h-12 flex-1 rounded-t bg-[#d5ad79]" /></div></div></div></div></div>
+          <div className="absolute -bottom-8 -left-5 z-20 hidden w-32 overflow-hidden rounded-[1.5rem] border-[5px] border-[#292827] bg-white shadow-xl sm:block"><div className="mx-auto h-3 w-11 rounded-b-full bg-[#292827]" /><div className="p-3"><div className="h-2 w-14 rounded bg-stone-900" /><div className="mt-3 h-16 rounded-lg bg-[#f3e6d3]" /><div className="mt-3 h-1.5 w-full rounded bg-stone-100" /></div></div><div className="absolute -right-4 -top-7 hidden h-52 w-40 rounded-2xl border-4 border-[#292827] bg-[#fbfaf8] p-4 opacity-70 shadow-lg lg:block"><div className="grid grid-cols-2 gap-2"><div className="h-14 rounded bg-stone-200" /><div className="h-14 rounded bg-[#e5c490]" /><div className="col-span-2 h-20 rounded bg-white" /></div></div>
+        </motion.div>
+      </div>
+    </section>);
+
+}
