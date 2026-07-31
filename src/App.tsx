@@ -5,7 +5,7 @@ import "./index.css";
 
 type Industry = "Restaurant" | "Music Artist" | "Record Label" | "School" | "Construction" | "Beauty" | "Medical" | "Online Store" | "Law Firm" | "Startup" | "Church" | "Property" | "Other";
 type Goal = "Get more customers" | "Sell online" | "Accept bookings" | "Automate work" | "Look professional" | "Launch fast";
-type Feature = "Landing Page" | "Business Website" | "Online Store" | "Booking System" | "WhatsApp" | "Google Maps" | "SEO" | "Business Email" | "Logo Design" | "Brand Identity" | "Hosting" | "AI Chatbot" | "Payments" | "Blog" | "Analytics" | "Client Portal" | "Dashboard" | "Maintenance" | "Music Player" | "EPK" | "Release Calendar" | "Royalty Tracking" | "Student Portal" | "Courses";
+type Feature = "Landing Page" | "Business Website" | "Online Store" | "Booking System" | "WhatsApp" | "Google Maps" | "SEO" | "Business Email" | "Logo Design" | "Brand Identity" | "Hosting" | "AI Chatbot" | "Payments" | "Blog" | "Analytics" | "Client Portal" | "Dashboard" | "Maintenance" | "Music Player" | "EPK" | "Release Calendar" | "Royalty Tracking" | "Student Portal" | "Courses" | "Gallery" | "Contact Form";
 type Lead = { name: string; email: string; phone: string; company: string; industry: Industry | ""; goal: Goal | ""; features: Feature[]; timeline: string; budget: string };
 
 const industries: Industry[] = ["Restaurant", "Music Artist", "Record Label", "School", "Construction", "Beauty", "Medical", "Online Store", "Law Firm", "Startup", "Church", "Property", "Other"];
@@ -39,25 +39,27 @@ const prices: Record<Feature, number> = {
   "Royalty Tracking": 4200,
   "Student Portal": 3500,
   Courses: 2400,
+  Gallery: 400,
+  "Contact Form": 300,
 };
 
 const industryRecommendations: Record<Industry, Feature[]> = {
   Restaurant: ["Business Website", "Booking System", "Payments", "WhatsApp", "Google Maps", "SEO"],
-  "Music Artist": ["EPK", "Music Player", "Booking System", "Gallery" as Feature, "WhatsApp", "SEO"].filter(Boolean) as Feature[],
+  "Music Artist": ["EPK", "Music Player", "Booking System", "Gallery", "WhatsApp", "SEO"],
   "Record Label": ["Business Website", "Release Calendar", "Royalty Tracking", "Client Portal", "Dashboard", "Analytics"],
   School: ["Student Portal", "Courses", "Payments", "Dashboard", "Business Email", "SEO"],
-  Construction: ["Business Website", "Gallery" as Feature, "WhatsApp", "Google Maps", "SEO", "Analytics"].filter(Boolean) as Feature[],
+  Construction: ["Business Website", "Gallery", "WhatsApp", "Google Maps", "SEO", "Analytics"],
   Beauty: ["Booking System", "Business Website", "WhatsApp", "Google Maps", "SEO", "Payments"],
   Medical: ["Booking System", "Business Website", "Business Email", "Google Maps", "SEO", "Analytics"],
   "Online Store": ["Online Store", "Payments", "Analytics", "SEO", "Business Email", "Hosting"],
-  "Law Firm": ["Business Website", "Contact Form" as Feature, "Business Email", "SEO", "Google Maps", "Analytics"].filter(Boolean) as Feature[],
+  "Law Firm": ["Business Website", "Contact Form", "Business Email", "SEO", "Google Maps", "Analytics"],
   Startup: ["Landing Page", "Brand Identity", "AI Chatbot", "Analytics", "SEO", "Hosting"],
   Church: ["Business Website", "Blog", "Payments", "WhatsApp", "Google Maps", "Analytics"],
-  Property: ["Business Website", "Gallery" as Feature, "WhatsApp", "Google Maps", "Client Portal", "Analytics"].filter(Boolean) as Feature[],
+  Property: ["Business Website", "Gallery", "WhatsApp", "Google Maps", "Client Portal", "Analytics"],
   Other: ["Business Website", "WhatsApp", "SEO", "Analytics", "Hosting"],
 };
 
-const allFeatureOptions: Feature[] = ["Landing Page", "Business Website", "Online Store", "Booking System", "WhatsApp", "Google Maps", "SEO", "Business Email", "Logo Design", "Brand Identity", "Hosting", "AI Chatbot", "Payments", "Blog", "Analytics", "Client Portal", "Dashboard", "Maintenance", "Music Player", "EPK", "Release Calendar", "Royalty Tracking", "Student Portal", "Courses"];
+const allFeatureOptions: Feature[] = ["Landing Page", "Business Website", "Online Store", "Booking System", "WhatsApp", "Google Maps", "SEO", "Business Email", "Logo Design", "Brand Identity", "Hosting", "AI Chatbot", "Payments", "Blog", "Analytics", "Client Portal", "Dashboard", "Maintenance", "Music Player", "EPK", "Release Calendar", "Royalty Tracking", "Student Portal", "Courses", "Gallery", "Contact Form"];
 const safePrice = (feature: Feature) => prices[feature] ?? 0;
 const formatRand = (amount: number) => `R${amount.toLocaleString("en-ZA")}`;
 const unique = <T,>(items: T[]) => Array.from(new Set(items));
