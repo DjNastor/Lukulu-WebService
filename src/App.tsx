@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { ArrowRightIcon, CalendarDaysIcon, CheckIcon, ChevronRightIcon, CreditCardIcon, HeadphonesIcon, MailIcon, MenuIcon, Mic2Icon, MousePointer2Icon, PlayIcon, SearchIcon, ShoppingCartIcon, SparklesIcon, XIcon } from "lucide-react";
+import { ArrowRightIcon, CalendarDaysIcon, CheckIcon, ChevronRightIcon, CreditCardIcon, HeadphonesIcon, MailIcon, MenuIcon, Mic2Icon, MousePointer2Icon, SearchIcon, ShoppingCartIcon, SparklesIcon, XIcon } from "lucide-react";
 import "./index.css";
 
 type Industry = "Restaurant" | "Music Artist" | "Record Label" | "School" | "Construction" | "Beauty" | "Medical" | "Online Store" | "Law Firm" | "Startup" | "Church" | "Property" | "Other";
