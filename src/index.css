@@ -1,18 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-
-:root {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  color: #1a1817;
-  background: #fdfcfb;
-  font-synthesis: none;
-}
+:root { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #1a1817; background: #fdfcfb; font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
 html { scroll-behavior: smooth; }
 body { margin: 0; min-width: 320px; background: #fdfcfb; }
 * { box-sizing: border-box; }
 button, input, select, textarea { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 3px solid #e5ba78; outline-offset: 3px; }
 ::selection { background: #f2dfbf; color: #1a1817; }
 .font-serif { font-family: 'Fraunces', Georgia, serif; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
