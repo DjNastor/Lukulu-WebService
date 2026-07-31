@@ -16,3 +16,5 @@ button:disabled { cursor: not-allowed; }
 details summary::-webkit-details-marker { display: none; }
 @keyframes luxe-pan { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
+body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: .035; background-image: radial-gradient(#1a1817 0.7px, transparent 0.7px); background-size: 18px 18px; }
+#root { position: relative; z-index: 1; }
