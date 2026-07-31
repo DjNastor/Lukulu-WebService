@@ -5,7 +5,8 @@ const navigation = [
 { label: "Portfolio", href: "#portfolio" },
 { label: "Services", href: "#services" },
 { label: "Tools", href: "#tools" },
-{ label: "Process", href: "#process" }];
+{ label: "Process", href: "#process" },
+{ label: "Get estimate", href: "#estimator" }];
 
 
 export function AgencyHeader() {
@@ -27,8 +28,8 @@ export function AgencyHeader() {
             </a>
           )}
         </div>
-        <a href="#contact" className="hidden rounded-full bg-[#1a1817] px-5 py-3 text-xs font-bold text-white transition-colors hover:bg-[#92400e] sm:inline-flex">
-          Request a Quote
+        <a href="#estimator" className="hidden rounded-full bg-[#1a1817] px-5 py-3 text-xs font-bold text-white transition-colors hover:bg-[#92400e] sm:inline-flex">
+          Get an estimate
         </a>
         <button type="button" className="rounded-lg p-2 text-[#1a1817] lg:hidden" onClick={() => setMenuOpen((open) => !open)} aria-expanded={menuOpen} aria-controls="mobile-navigation" aria-label="Toggle navigation menu">
           {menuOpen ? <XIcon size={23} /> : <MenuIcon size={23} />}
@@ -42,7 +43,7 @@ export function AgencyHeader() {
                 {item.label}
               </a>
           )}
-            <a href="#contact" onClick={closeMenu} className="mt-2 rounded-xl bg-[#1a1817] px-4 py-3 text-center text-sm font-bold text-white">Request a Quote</a>
+            <a href="#estimator" onClick={closeMenu} className="mt-2 rounded-xl bg-[#1a1817] px-4 py-3 text-center text-sm font-bold text-white">Get an estimate</a>
           </div>
         </div>
       }
