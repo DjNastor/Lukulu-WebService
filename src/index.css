@@ -7,8 +7,12 @@ html { scroll-behavior: smooth; }
 body { margin: 0; min-width: 320px; background: #fdfcfb; }
 * { box-sizing: border-box; }
 button, input, select, textarea { font: inherit; }
-button, a { -webkit-tap-highlight-color: transparent; }
+button, a, summary { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+button:disabled { cursor: not-allowed; }
 :focus-visible { outline: 3px solid #e5ba78; outline-offset: 3px; }
 ::selection { background: #f2dfbf; color: #1a1817; }
 .font-serif { font-family: 'Fraunces', Georgia, serif; }
+details summary::-webkit-details-marker { display: none; }
+@keyframes luxe-pan { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
